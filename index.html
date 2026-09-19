@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="張自華的個人履歷與設計作品集網站">
+  <title>張自華｜視覺設計師</title>
+  <script>tailwind = { theme: { extend: { colors: { ink: '#202321', muted: '#6f716a', paper: '#f4f0e8', accent: '#e9654d', line: '#cfc6b8' }, fontFamily: { sans: ['Noto Sans TC', 'sans-serif'], serif: ['Playfair Display', 'Georgia', 'serif'] } } };</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="m-0 bg-paper font-sans leading-[1.75] text-ink">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁">CHANG<br><span>DESIGN</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about" aria-label="About Me，關於我"><span class="nav-flip"><span class="nav-flip-front">About Me</span><span class="nav-flip-back" aria-hidden="true">關於我</span></span></a>
+      <a href="#experience" aria-label="Experience，工作經歷"><span class="nav-flip"><span class="nav-flip-front">Experience</span><span class="nav-flip-back" aria-hidden="true">工作經歷</span></span></a>
+      <a href="#skills" aria-label="Skills，專業技能"><span class="nav-flip"><span class="nav-flip-front">Skills</span><span class="nav-flip-back" aria-hidden="true">專業技能</span></span></a>
+      <a class="nav-contact" href="mailto:hello@example.com" aria-label="Contact Me，聯絡我"><span class="nav-flip"><span class="nav-flip-front">Contact Me</span><span class="nav-flip-back" aria-hidden="true">聯絡我</span></span> <span class="arrow arrow-left">←</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">VISUAL DESIGNER / WEB DESIGNER</p>
+        <h1>把想法，<br><em>變成看得見的事。</em></h1>
+        <p class="hero-intro">我是張自華，專注於品牌視覺、網頁美術與數位內容設計。從概念發想到細節落地，讓每一次溝通都成為更好的作品。</p>
+        <a class="text-link" href="#experience">探索我的經歷 <span class="arrow">↓</span></a>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="profile.jpg" alt="張自華的大頭貼">
+        </div>
+        <span class="visual-note note-top">EST. 1996<br>TAICHUNG, TW</span>
+        <div class="circle-stamp">CREATE<br>WITH<br>INTENTION</div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell">
+      <div class="section-label"><span>01</span> 個人簡介</div>
+      <div class="about-content">
+        <h2 class="typewriter">
+          <span class="type-line">用視覺說故事，</span>
+          <span class="type-line accent-line">讓訊息被記住。</span>
+        </h2>
+        <div class="about-details">
+          <p>臺灣臺中人，1996 年生，畢業於南台科技大學視覺傳達設計系。具備網頁美術、品牌視覺、數位行銷素材與平面設計經驗，熟悉從視覺發想到設計執行、跨部門溝通及專案協作。</p>
+          <p>對展演與影像文化保持關注，平時透過觀賞電影及瀏覽各類展演累積觀察力，持續拓展設計思維。</p>
+          <div class="about-tags"><span>品牌視覺</span><span>網頁美術</span><span>數位內容</span><span>跨部門協作</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience section-shell">
+      <div class="section-label"><span>02</span> 工作經歷</div>
+      <div class="timeline">
+        <article class="job featured-job">
+          <div class="job-meta"><span>2022.08 — 2025.07</span></div><span class="job-shape" aria-hidden="true"></span>
+          <div class="job-body"><h3><span class="job-title-main">網頁美術設計</span> <small>Web Designer</small></h3><p class="company">揚京快客網路科技公司</p><p>規劃與設計網站模組及頁面，運用 HTML／CSS 優化響應式版型，加入互動特效與動畫，並協助客戶進行設計提案、需求溝通與專案協作。</p><div class="job-keywords"><span>Web Design</span><span>HTML / CSS</span><span>UI Visual</span></div></div>
+        </article>
+        <article class="job">
+          <div class="job-meta"><span>2021.10 — 2022.05</span></div><span class="job-shape" aria-hidden="true"></span>
+          <div class="job-body"><h3><span class="job-title-main">美術視覺設計</span> <small>Visual Designer</small></h3><p class="company">瑞奧股份有限公司</p><p>負責課程主視覺、官網、社群平台及數位媒體廣告素材，與行銷部門共同激發創意並完成設計執行。</p><div class="job-keywords"><span>Visual Design</span><span>Digital Ads</span><span>Branding</span></div></div>
+        </article>
+        <article class="job">
+          <div class="job-meta"><span>2021.10 — 2022.05</span></div><span class="job-shape" aria-hidden="true"></span>
+          <div class="job-body"><h3><span class="job-title-main">美術視覺設計組組長</span> <small>Visual Design Team Leader</small></h3><p class="company">悠達天下股份公司</p><p>規劃品牌行銷活動宣傳物，協調跨部門資源與設計排程，改善作業流程並提升團隊協作效率。</p><div class="job-keywords"><span>Team Lead</span><span>Campaign</span><span>Workflow</span></div></div>
+        </article>
+        <article class="job">
+          <div class="job-meta"><span>2019.05 — 2021.05</span></div><span class="job-shape" aria-hidden="true"></span>
+          <div class="job-body"><h3><span class="job-title-main">美術視覺設計</span> <small>Visual Designer</small></h3><p class="company">悠達天下股份有限公司</p><p>負責課程主視覺、品牌素材與數位廣告，維持品牌視覺一致性並提升活動曝光。</p><div class="job-keywords"><span>Art Direction</span><span>Social Media</span><span>Campaign</span></div></div>
+        </article>
+        <article class="job compact-job">
+          <div class="job-meta"><span>2018.10 — 2019.03</span></div><span class="job-shape" aria-hidden="true"></span>
+          <div class="job-body"><h3><span class="job-title-main">設計美編</span> <small>Graphic Designer</small></h3><p class="company">臺灣博通股份有限公司 ・ 格瑞仕股份有限公司</p><p>執行品牌識別、社群內容、商品攝影與資料上架，並參與影音素材製作。</p><div class="job-keywords"><span>Graphic Design</span><span>Photography</span><span>Content</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section-shell">
+      <div class="section-label"><span>03</span> 學歷與專業技能</div>
+      <div class="skills-grid">
+        <div class="education-card">
+          <p class="card-kicker">EDUCATION</p><div class="edu-year">2014—2018</div><h3>南台科技大學</h3><p>視覺傳達設計系</p><p class="interest-label">興趣</p><div class="line-decoration"></div><p class="interest">電影欣賞<br>展覽與藝文展演</p>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row"><span>01</span><strong>Adobe Illustrator</strong><div class="meter"><i style="width: 94%"></i></div><em>精通</em></div>
+          <div class="skill-row"><span>02</span><strong>Adobe Photoshop</strong><div class="meter"><i style="width: 78%"></i></div><em>中階</em></div>
+          <div class="skill-row"><span>03</span><strong>Adobe After Effects</strong><div class="meter"><i style="width: 72%"></i></div><em>中階</em></div>
+          <div class="skill-row"><span>04</span><strong>Clip Studio Paint</strong><div class="meter"><i style="width: 94%"></i></div><em>精通</em></div>
+          <div class="skill-row"><span>05</span><strong>HTML／CSS</strong><div class="meter"><i style="width: 84%"></i></div><em>熟悉</em></div>
+          <div class="skill-row"><span>06</span><strong>ChatGPT／生成式 AI</strong><div class="meter"><i style="width: 76%"></i></div><em>中階</em></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="footer-mark" href="#top" aria-label="回到首頁">CHANG<br>DESIGN</a><p>設計，是讓複雜變得清楚。</p></div>
+    <div class="footer-mail">LET'S WORK<br><em>TOGETHER</em></div>
+    <small>© 2025 CHANG TZU-HUA. ALL RIGHTS RESERVED.</small>
+    <a class="back-to-top" href="#top" aria-label="回到最上方">↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
