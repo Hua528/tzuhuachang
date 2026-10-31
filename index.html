@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="張自華的個人履歷與設計作品集網站">
   <title>張自華｜視覺設計師</title>
-  <script>tailwind = { theme: { extend: { colors: { ink: '#202321', muted: '#6f716a', paper: '#f4f0e8', accent: '#e9654d', line: '#cfc6b8' }, fontFamily: { sans: ['Noto Sans TC', 'sans-serif'], serif: ['Playfair Display', 'Georgia', 'serif'] } } };</script>
+  <script>window.tailwind = { theme: { extend: { colors: { ink: '#202321', muted: '#6f716a', paper: '#f4f0e8', accent: '#e9654d', line: '#cfc6b8' }, fontFamily: { sans: ['Noto Sans TC', 'sans-serif'], serif: ['Playfair Display', 'Georgia', 'serif'] } } } };</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,9 +16,10 @@
       <a href="#about" aria-label="About Me，關於我"><span class="nav-flip"><span class="nav-flip-front">About Me</span><span class="nav-flip-back" aria-hidden="true">關於我</span></span></a>
       <a href="#experience" aria-label="Experience，工作經歷"><span class="nav-flip"><span class="nav-flip-front">Experience</span><span class="nav-flip-back" aria-hidden="true">工作經歷</span></span></a>
       <a href="#skills" aria-label="Skills，專業技能"><span class="nav-flip"><span class="nav-flip-front">Skills</span><span class="nav-flip-back" aria-hidden="true">專業技能</span></span></a>
+      <a href="#portfolio" aria-label="Portfolio，作品集"><span class="nav-flip"><span class="nav-flip-front">Portfolio</span><span class="nav-flip-back" aria-hidden="true">作品集</span></span></a>
       <a class="nav-contact" href="mailto:hello@example.com" aria-label="Contact Me，聯絡我"><span class="nav-flip"><span class="nav-flip-front">Contact Me</span><span class="nav-flip-back" aria-hidden="true">聯絡我</span></span> <span class="arrow arrow-left">←</span></a>
     </nav>
-    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span></button>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
   <main id="top">
@@ -83,7 +84,7 @@
       <div class="section-label"><span>03</span> 學歷與專業技能</div>
       <div class="skills-grid">
         <div class="education-card">
-          <p class="card-kicker">EDUCATION</p><div class="edu-year">2014—2018</div><h3>南台科技大學</h3><p>視覺傳達設計系</p><p class="interest-label">興趣</p><div class="line-decoration"></div><p class="interest">電影欣賞<br>展覽與藝文展演</p>
+          <p class="card-kicker">EDUCATION</p><div class="edu-year">2014—2018</div><h3>南台科技大學</h3><p>視覺傳達設計系</p>
         </div>
         <div class="skill-list">
           <div class="skill-row"><span>01</span><strong>Adobe Illustrator</strong><div class="meter"><i style="width: 94%"></i></div><em>精通</em></div>
@@ -95,6 +96,58 @@
         </div>
       </div>
     </section>
+
+    <section id="portfolio" class="portfolio section-shell">
+      <div class="section-label"><span>04</span> 作品集</div>
+      <nav class="portfolio-nav" aria-label="作品集分類">
+        <a href="#portfolio-graphic">01 <span>平面設計</span> ↓</a>
+        <a href="#portfolio-web">02 <span>網頁作品集</span> ↓</a>
+      </nav>
+      <section class="portfolio-category" id="portfolio-graphic" aria-labelledby="portfolio-graphic-title">
+        <div class="portfolio-category-heading">
+          <span class="portfolio-category-number">01</span>
+          <h3 id="portfolio-graphic-title">平面設計</h3>
+          <span class="portfolio-category-en">GRAPHIC DESIGN</span>
+        </div>
+        <div class="graphic-work-grid" aria-label="平面設計作品輪播"></div>
+      </section>
+      <section class="portfolio-category" id="portfolio-web" aria-labelledby="portfolio-web-title">
+        <div class="portfolio-category-heading">
+          <span class="portfolio-category-number">02</span>
+          <h3 id="portfolio-web-title">網頁作品集</h3>
+          <span class="portfolio-category-en">WEB PORTFOLIO</span>
+        </div>
+        <div class="web-project-grid">
+          <a class="web-project-card" href="https://www.howhowbeauty.com/" target="_blank" rel="noopener noreferrer">
+            <div class="web-project-image"><img src="https://pic03.eapple.com.tw/howhowbeauty/hhb_i_img09.png" alt="好好國際健康美學網站首頁視覺" loading="lazy"></div>
+            <div class="web-project-info"><span class="web-project-type">BEAUTY / SERVICE</span><h4>好好國際健康美學</h4><p>美胸、美肌與淨毛服務品牌網站。</p><span class="web-project-link">前往網站 <span aria-hidden="true">↗</span></span></div>
+          </a>
+          <a class="web-project-card" href="https://www.chyuanzihran.com/" target="_blank" rel="noopener noreferrer">
+            <div class="web-project-image"><img src="https://pic03.eapple.com.tw/chyuanzihran/ch_i_bg1.jpg" alt="全自然生命禮儀網站首頁蘭花主視覺" loading="lazy"></div>
+            <div class="web-project-info"><span class="web-project-type">LIFE / SERVICE</span><h4>全自然生命禮儀</h4><p>以誠信、關懷與陪伴為核心的生命禮儀服務網站。</p><span class="web-project-link">前往網站 <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <div class="contact-panel section-shell">
+      <button class="contact-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-modal">聯絡我</button>
+      <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
+        <div class="contact-modal-header">
+          <h2 id="contact-modal-title">和我聊聊你的想法</h2>
+          <button class="contact-close" type="button" aria-label="關閉聯絡表單">×</button>
+        </div>
+        <form class="contact-form" id="contact-form" data-gas-endpoint="https://script.google.com/macros/s/AKfycbwk4vgb7tX0Lyeu70m_LsSv0zK6zLF155z7YyawutJtL3BJKosHQhW2qpmXI2WU8xfZiQ/exec">
+          <div class="contact-fields">
+            <label>姓名<input name="name" type="text" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label>訊息<textarea name="message" rows="5" required></textarea></label>
+          <button class="contact-submit" type="submit">送出訊息</button>
+          <p class="contact-status" role="status" aria-live="polite"></p>
+        </form>
+      </dialog>
+    </div>
   </main>
 
   <footer class="site-footer">
