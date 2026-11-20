@@ -7,7 +7,7 @@
   <title>張自華｜視覺設計師</title>
   <script>window.tailwind = { theme: { extend: { colors: { ink: '#202321', muted: '#6f716a', paper: '#f4f0e8', accent: '#e9654d', line: '#cfc6b8' }, fontFamily: { sans: ['Noto Sans TC', 'sans-serif'], serif: ['Playfair Display', 'Georgia', 'serif'] } } } };</script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261119">
 </head>
 <body class="m-0 bg-paper font-sans leading-[1.75] text-ink">
   <header class="site-header">
@@ -40,7 +40,7 @@
     </section>
 
     <section id="about" class="about section-shell">
-      <div class="section-label"><span>01</span> 個人簡介</div>
+      <div class="section-label"><strong>個人簡介</strong><span class="section-en">ABOUT ME</span></div>
       <div class="about-content">
         <h2 class="typewriter">
           <span class="type-line">用視覺說故事，</span>
@@ -55,7 +55,7 @@
     </section>
 
     <section id="experience" class="experience section-shell">
-      <div class="section-label"><span>02</span> 工作經歷</div>
+      <div class="section-label"><strong>工作經歷</strong><span class="section-en">EXPERIENCE</span></div>
       <div class="timeline">
         <article class="job featured-job">
           <div class="job-meta"><span>2022.08 — 2025.07</span></div><span class="job-shape" aria-hidden="true"></span>
@@ -81,7 +81,7 @@
     </section>
 
     <section id="skills" class="skills section-shell">
-      <div class="section-label"><span>03</span> 學歷與專業技能</div>
+      <div class="section-label"><strong>學歷與專業技能</strong><span class="section-en">EDUCATION &amp; SKILLS</span></div>
       <div class="skills-grid">
         <div class="education-card">
           <p class="card-kicker">EDUCATION</p><div class="edu-year">2014—2018</div><h3>南台科技大學</h3><p>視覺傳達設計系</p>
@@ -98,35 +98,94 @@
     </section>
 
     <section id="portfolio" class="portfolio section-shell">
-      <div class="section-label"><span>04</span> 作品集</div>
       <nav class="portfolio-nav" aria-label="作品集分類">
-        <a href="#portfolio-graphic">01 <span>平面設計</span> ↓</a>
-        <a href="#portfolio-web">02 <span>網頁作品集</span> ↓</a>
+        <a href="#portfolio-web"><span>網頁作品集</span></a>
+        <a href="#portfolio-graphic"><span>平面設計</span></a>
       </nav>
-      <section class="portfolio-category" id="portfolio-graphic" aria-labelledby="portfolio-graphic-title">
-        <div class="portfolio-category-heading">
-          <span class="portfolio-category-number">01</span>
-          <h3 id="portfolio-graphic-title">平面設計</h3>
-          <span class="portfolio-category-en">GRAPHIC DESIGN</span>
-        </div>
-        <div class="graphic-work-grid" aria-label="平面設計作品輪播"></div>
-      </section>
       <section class="portfolio-category" id="portfolio-web" aria-labelledby="portfolio-web-title">
         <div class="portfolio-category-heading">
-          <span class="portfolio-category-number">02</span>
           <h3 id="portfolio-web-title">網頁作品集</h3>
           <span class="portfolio-category-en">WEB PORTFOLIO</span>
         </div>
         <div class="web-project-grid">
-          <a class="web-project-card" href="https://www.howhowbeauty.com/" target="_blank" rel="noopener noreferrer">
-            <div class="web-project-image"><img src="https://pic03.eapple.com.tw/howhowbeauty/hhb_i_img09.png" alt="好好國際健康美學網站首頁視覺" loading="lazy"></div>
-            <div class="web-project-info"><span class="web-project-type">BEAUTY / SERVICE</span><h4>好好國際健康美學</h4><p>美胸、美肌與淨毛服務品牌網站。</p><span class="web-project-link">前往網站 <span aria-hidden="true">↗</span></span></div>
-          </a>
-          <a class="web-project-card" href="https://www.chyuanzihran.com/" target="_blank" rel="noopener noreferrer">
-            <div class="web-project-image"><img src="https://pic03.eapple.com.tw/chyuanzihran/ch_i_bg1.jpg" alt="全自然生命禮儀網站首頁蘭花主視覺" loading="lazy"></div>
-            <div class="web-project-info"><span class="web-project-type">LIFE / SERVICE</span><h4>全自然生命禮儀</h4><p>以誠信、關懷與陪伴為核心的生命禮儀服務網站。</p><span class="web-project-link">前往網站 <span aria-hidden="true">↗</span></span></div>
-          </a>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.howhowbeauty.com/" target="_blank" rel="noopener noreferrer" aria-label="好好國際健康美學網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-howhowbeauty.jpg" alt="好好國際健康美學完整網站頁面縮圖" width="1280" height="5920" loading="eager" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">BEAUTY / SERVICE</span><h4>好好國際健康美學</h4><p>美胸、美肌與淨毛服務品牌網站。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.wushinn.com.tw/" target="_blank" rel="noopener noreferrer" aria-label="有芯肉品網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-wushinn.jpg" alt="有芯肉品完整網站頁面縮圖" width="1948" height="3834" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">FOOD / WHOLESALE</span><h4>有芯肉品</h4><p>雞肉供應與批發品牌網站，呈現品質理念、產品價值及台中在地供應服務。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.rich-bbq.com/" target="_blank" rel="noopener noreferrer" aria-label="大發烤肉網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-rich-bbq.jpg" alt="大發烤肉完整網站頁面縮圖" width="1948" height="11556" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">FOOD / FRANCHISE</span><h4>大發烤肉</h4><p>燒烤店、烤肉食材與創業加盟品牌網站，整合加盟流程、商品批發及聯絡資訊。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.geometricoptics.com/" target="_blank" rel="noopener noreferrer" aria-label="幾何光學眼鏡網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-geometricoptics.jpg" alt="幾何光學眼鏡完整網站頁面縮圖" width="1948" height="4648" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">OPTICS / SERVICE</span><h4>幾何光學眼鏡</h4><p>桃園中壢眼鏡與專業驗光品牌網站，呈現配鏡服務、品牌理念及門市資訊。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.supercute-txg.com.tw/" target="_blank" rel="noopener noreferrer" aria-label="SuperCute寶寶親子寫真網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-supercute-txg.jpg" alt="SuperCute寶寶親子寫真完整網站頁面縮圖" width="1948" height="18106" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">PHOTO / PORTRAIT</span><h4>SuperCute 寶寶親子寫真</h4><p>台北、新竹、台中親子與兒童寫真攝影網站，介紹拍攝風格、服務流程及預約方式。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.heideland.com.tw/" target="_blank" rel="noopener noreferrer" aria-label="海德藍淨水網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-heideland.jpg" alt="海德藍淨水完整網站頁面縮圖" width="1948" height="9338" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">WATER / SERVICE</span><h4>海德藍淨水</h4><p>台中淨水器與飲水設備品牌網站，介紹產品種類、安裝實績、售後保養及品質保證。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.zrcarfilmwrap.com/" target="_blank" rel="noopener noreferrer" aria-label="Z.R車體包膜網站預覽；捲動查看圖片，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-zrcarfilmwrap.jpg" alt="Z.R車體包膜第二張主視覺與完整頁面縮圖" width="1948" height="13286" loading="lazy" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">AUTO / WRAPPING</span><h4>Z.R 車體包膜</h4><p>苗栗後龍汽車改色包膜、犀牛皮、隱形防護與隔熱膜品牌網站，呈現專業服務與車體美學。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.yijiawoodfloor.com/" target="_blank" rel="noopener noreferrer" aria-label="翊嘉木地板網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-yijia.jpg" alt="翊嘉木地板完整網站頁面縮圖" width="450" height="1228" loading="eager" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">HOME / FLOORING</span><h4>翊嘉木地板</h4><p>高雄木地板與 SPC 石塑地板服務網站，介紹空間丈量、專業施工及代工服務。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.dajhih.com/" target="_blank" rel="noopener noreferrer" aria-label="大治洗淨網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-dajhih.jpg" alt="大治洗淨完整網站頁面縮圖" width="1280" height="3738" loading="eager" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">HOME / SERVICE</span><h4>大治洗淨</h4><p>冷氣與洗衣機清洗服務網站，呈現服務項目、清潔流程與預約資訊。</p></div>
+          </article>
+          <article class="web-project-card">
+            <a class="web-project-image web-project-image--scroll" href="https://www.teeupclub.com/" target="_blank" rel="noopener noreferrer" aria-label="TEE UP GOLF 網站預覽；捲動查看完整頁面，點擊前往網站">
+              <span class="web-project-scrollbar-cue" aria-hidden="true"></span>
+              <img src="preview-teeupclub.jpg" alt="TEE UP GOLF 完整網站頁面縮圖" width="1216" height="6006" loading="eager" decoding="async">
+            </a>
+            <div class="web-project-info"><span class="web-project-type">GOLF / SERVICE</span><h4>TEE UP GOLF 室內高爾夫</h4><p>竹北 24 小時室內高爾夫球場網站，介紹場館特色、模擬體驗與線上預約。</p></div>
+          </article>
         </div>
+      </section>
+      <section class="portfolio-category" id="portfolio-graphic" aria-labelledby="portfolio-graphic-title">
+        <div class="portfolio-category-heading">
+          <h3 id="portfolio-graphic-title">平面設計</h3>
+          <span class="portfolio-category-en">GRAPHIC DESIGN</span>
+        </div>
+        <div class="graphic-work-grid" aria-label="平面設計作品輪播"></div>
       </section>
     </section>
 
@@ -156,6 +215,6 @@
     <small>© 2025 CHANG TZU-HUA. ALL RIGHTS RESERVED.</small>
     <a class="back-to-top" href="#top" aria-label="回到最上方">↑</a>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20261119"></script>
 </body>
 </html>

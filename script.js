@@ -129,6 +129,26 @@ function setupSkillMeters() {
   observer.observe(skills);
 }
 
+function setupWebProjectScrollbars() {
+  document.querySelectorAll('.web-project-image--scroll').forEach((preview) => {
+    const scrollbar = preview.querySelector('.web-project-scrollbar-cue');
+    if (!scrollbar) return;
+
+    const updateThumb = () => {
+      const scrollRange = preview.scrollHeight - preview.clientHeight;
+      const thumbTravel = scrollbar.clientHeight * 0.76 - 4;
+      const progress = scrollRange > 0 ? preview.scrollTop / scrollRange : 0;
+      scrollbar.style.setProperty('--scroll-thumb-offset', `${Math.max(0, thumbTravel * progress)}px`);
+    };
+
+    preview.addEventListener('scroll', updateThumb, { passive: true });
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(updateThumb).observe(preview);
+    }
+    updateThumb();
+  });
+}
+
 function setupGraphicPortfolio() {
   const container = document.querySelector('.graphic-work-grid');
   if (!container) return;
@@ -210,21 +230,11 @@ function setupGraphicPortfolio() {
     previous.setAttribute('aria-label', '上一張');
     previous.textContent = '‹';
 
-    const count = document.createElement('span');
-    count.className = 'graphic-carousel-count';
-    count.setAttribute('aria-live', 'polite');
-
     const next = document.createElement('button');
     next.type = 'button';
     next.title = '下一張';
     next.setAttribute('aria-label', '下一張');
     next.textContent = '›';
-
-    const toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.title = prefersReducedMotion ? '播放輪播' : '暫停輪播';
-    toggle.setAttribute('aria-label', toggle.title);
-    toggle.textContent = prefersReducedMotion ? '▶' : 'Ⅱ';
 
     let currentIndex = 0;
     let isPlaying = !prefersReducedMotion;
@@ -234,7 +244,6 @@ function setupGraphicPortfolio() {
 
     const renderSlide = () => {
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      count.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(files.length).padStart(2, '0')}`;
       slides.forEach(({ slide, link }, index) => {
         const isCurrent = index === currentIndex;
         slide.setAttribute('aria-label', `${index + 1} / ${files.length}`);
@@ -256,13 +265,6 @@ function setupGraphicPortfolio() {
 
     previous.addEventListener('click', () => move(-1));
     next.addEventListener('click', () => move(1));
-    toggle.addEventListener('click', () => {
-      isPlaying = !isPlaying;
-      toggle.textContent = isPlaying ? 'Ⅱ' : '▶';
-      toggle.title = isPlaying ? '暫停輪播' : '播放輪播';
-      toggle.setAttribute('aria-label', toggle.title);
-      syncAutoplay();
-    });
     carousel.addEventListener('mouseenter', () => { isHovered = true; syncAutoplay(); });
     carousel.addEventListener('mouseleave', () => { isHovered = false; syncAutoplay(); });
     carousel.addEventListener('focusin', () => { isHovered = true; syncAutoplay(); });
@@ -275,7 +277,7 @@ function setupGraphicPortfolio() {
     document.addEventListener('visibilitychange', syncAutoplay);
 
     viewport.append(track);
-    controls.append(previous, count, next, toggle);
+    controls.append(previous, next);
     carousel.append(heading, viewport, controls);
     container.append(carousel);
     renderSlide();
@@ -297,4 +299,5 @@ setupNavigation();
 setupContactForm();
 setupTypewriter();
 setupSkillMeters();
+setupWebProjectScrollbars();
 setupGraphicPortfolio();
